@@ -1,13 +1,14 @@
 {
   "name": "site_arquitetura",
   "version": "1.0.0",
+  "homepage": "https://adrianojpn.github.io/site_arquitetura",
   "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "build:web": "expo export --platform web",
+    "build:web": "expo export --platform web && node -e \"require('fs').writeFileSync('dist/.nojekyll', '')\"",
     "predeploy": "npm run build:web",
     "deploy": "gh-pages -d dist"
   },
